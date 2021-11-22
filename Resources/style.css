@@ -1,0 +1,345 @@
+/* Universal Styles */
+:root {
+    --dark-gray: #2D3142;
+    --light-gray: #4F5D75;
+    --green: #49A078;
+    --orange: #E26D5A;
+    --periwinkle: #C7CCDB;
+}
+
+html {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-gray);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 2.75rem;
+    color: var(--periwinkle);
+    border-bottom: .4rem double;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h5 {
+    font-size: 1.5rem;
+    margin: 0;
+    height: 50%;
+}
+
+p {
+    line-height: 150%;
+}
+
+#page-container {
+    position: relative;
+    --displacement: 5.5rem;
+    margin-top: var(--displacement);
+    min-height: calc(100vh - var(--displacement));
+}
+
+#content-wrap {
+    padding-bottom: 70px;
+}
+
+a:not(.clickable-image){
+    color: var(--green);
+    font-size: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    transition: color .5s ease-in, font-weight .25s ease-in, background-color .5s ease-in;
+}
+
+a:hover:not(.clickable-image) {
+    color: black;
+    font-weight: bold;
+    background-color: var(--orange);
+}
+
+/* Header */
+
+header {
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    height: 70px;
+}
+
+header h2 {
+    margin: 1rem 1%;
+    color: var(--green);
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    padding: 0;
+    justify-content: space-around;
+    margin: 0;
+}
+
+#nav li {
+    margin: 0;
+    width: 24.5%;
+    height: 100%;    
+    border-radius: 5px;
+}
+
+#nav a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#active {
+    background-color: var(--orange);
+    color: black;
+    font-weight: bold;
+}
+
+/* Main */
+
+main {
+    position: relative;
+    text-align: center;
+}
+
+/* About */
+
+#about p {
+    width: 85%;
+    margin: 2% auto;
+}
+
+/* Skills */
+
+#skills ul {
+    text-align: left;
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+#skills #content {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+}
+
+.skillset {
+    width: 25%;
+}
+
+/* Projects */
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.image {
+    width: 35%;    
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    align-self: center;
+    height: fit-content;
+    overflow: hidden;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Image Enlargement Overlay */
+
+#fruit-overlay, #rpg-overlay, #argon-overlay, #zombie-overlay {
+    position: fixed;
+    width: 100vw;
+    background: rgba(0,0,0,.7);
+    height: 100vh;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity .5s ease-in-out;
+}
+
+#fruit-overlay:target, #rpg-overlay:target, #argon-overlay:target, #zombie-overlay:target {
+    opacity: 1;
+    z-index: 200;
+}
+
+#fruit-overlay img, #rpg-overlay img, #argon-overlay img, #zombie-overlay img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+}
+
+    #fruit-overlay:target img, #rpg-overlay:target img, #argon-overlay:target img, #zombie-overlay:target img {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    #fruit-overlay:target .close, #fruit-overlay:target .close, #rpg-overlay:target .close, #argon-overlay:target .close, #zombie-overlay:target .close {
+        top: 0;
+    }
+
+/* Image overlay "X" */
+.close {
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 20px;
+    transition: .5s ease-in-out;
+    z-index: 200;
+}
+
+    .close::before {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top: 10px;
+        transform: rotate(45deg);
+    }
+
+    .close::after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+
+/* Back to projects */
+
+.project {
+    display: flex;
+    margin: 3%;
+    position: relative;
+    border-radius: 7px;
+    min-height: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game {
+    display: flex;
+    margin: 1.5% .5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.description p {
+    text-align: center;
+}
+
+.game-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-footer p {
+    margin: 0;
+    margin-bottom: 1.5%;
+}
+
+.enlarge-text {
+    width: 35%;
+}
+
+.git-link {
+    width: 60%;
+}
+
+#rpg,
+#argon {
+    margin-right: 1%;
+    margin-left: 5%;
+    background-image: linear-gradient(to left, rgba(45, 49, 66, .7), rgba(45, 49, 66, .2));
+}
+
+#fruitpocalypse,
+#zombie {
+    margin-left: 1%;
+    margin-right: 5%;
+    background-image: linear-gradient(to right, rgba(45, 49, 66, .7), rgba(45, 49, 66, .2));
+}
+
+#rpg .game,
+#argon .game {
+    flex-direction: row-reverse;
+}
+
+/* Footer */
+footer {
+    height: 70px;
+    width: 100%;
+    background-color: var(--dark-gray);
+    position: absolute;
+    bottom: 0;
+}
