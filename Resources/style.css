@@ -95,7 +95,7 @@ header h2 {
 #nav {
     display: flex;
     list-style: none;
-    width: 50%;
+    width: 27%;
     padding: 0;
     justify-content: space-around;
     margin: 0;
@@ -103,7 +103,7 @@ header h2 {
 
 #nav li {
     margin: 0;
-    width: 24.5%;
+    width: 49%;
     height: 100%;    
     border-radius: 5px;
 }
@@ -155,6 +155,12 @@ main {
 
 .skillset {
     width: 25%;
+}
+
+/* Contact */
+
+#contact a {
+    text-transform: none;
 }
 
 /* Projects */
