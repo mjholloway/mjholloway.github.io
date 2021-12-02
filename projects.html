@@ -20,7 +20,7 @@
             <main>
                 <section id="projects">
                     <h3>Projects</h3>
-                    <ul>
+                    <ul id="project-list">
                         <li class="project" id="fruitpocalypse">
                             <div class="game">
                                 
@@ -36,16 +36,25 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <h4>Fruitpocalypse</h4>
-                                    <p>
-                                        This project started as a basic tower defense game I was building for practice. Eventually I had the idea of combining tower defense mechanics
-                                        with deckbuilders, a genre I was (and still am) very interested in. This game is still in progress, and I hope to be able to actually
-                                        make a full release at some point. I was able to use this project to learn pathfinding algorithms, practice using scripts that change
-                                        the funcitonality of the editor itself, and implement other techniques I had learned across projects. One of the biggest challenges I faced
-                                        with this project so far was implementing more complex coroutines than I had ever used before, primarily on handling the individual cards and
-                                        dealing the initial hand, which greatly improved my confidence using coroutines when I finally got it working. I also made all the assets
-                                        myself which helped me gain some experience with voxel art and blender.
-                                    </p>
+                                    <h4 id="fruit-title">Fruitpocalypse</h4>
+                                    <div class="summary-container">
+                                        <p>
+                                            It started as a basic tower defense game I was building for practice. Eventually, I had the idea of combining tower defense mechanics 
+                                            with deck-builders, a genre I was (and still am) very interested in. One of the biggest challenges I faced was implementing complex 
+                                            coroutines on handling the individual cards and dealing the initial hand. While I eventually overcame this obstacle, this game is still 
+                                            in progress, and I hope to be able to make a full release in the future.
+                                        </p>
+                                        <div class="skills-container">
+                                            <h5 class="skill-subtitle">Skills Acquired</h5>
+                                            <ul class="skills-list">
+                                                <li>Pathfinding algorithms</li>
+                                                <li>Changing editor functionality via scripts</li>
+                                                <li>Complex coroutines to animate movement of cards</li>
+                                                <li>Voxel art (MagicaVoxel)</li>
+                                                <li>Blender</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="game-footer">
@@ -68,15 +77,25 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <h4>RPG Level</h4>
-                                    <p>
-                                        This game is a basic RPG level in which the player must get through guards to reach the other end of a village. The player can pick up health
-                                        and several different types of weapons to help them defeat enemies. The player can level up by defeating enemies to increase their stats as
-                                        well (although different weapons respond differently to the increased stats). I was able to learn about interfaces and events and utilize them
-                                        both in this project. I also gained experience with a working save system and moving through different levels (or areas). I furthered my
-                                        knowledge of animating assets and creating a basic AI system that can patrol, chase, and eventually return to patroling after losing the player.
-                                        This was my first time trying to develop an actual leveling system with scaling stats and experience for defeating enemies.
-                                    </p>
+                                    <h4 id="rpg-title">RPG Level</h4>
+                                    <div class="summary-container">
+                                        <p>
+                                            This game is a basic RPG level in which a player must fight their way through a number of guards to reach the other end of a village. The player can pick 
+                                            up health and several different types of weapons to help them along the way. Defeating enemies will allow players to level up, with each weapon responding 
+                                            differently to the increased stats. The guards will patrol, chase, and eventually return to patrolling after losing the player.
+                                        </p>
+                                        <div class="skills-container">
+                                            <h5 class="skill-subtitle">Skills Acquired</h5>
+                                            <ul class="skills-list">
+                                                <li>Interfaces</li>
+                                                <li>C#/Unity Events</li>
+                                                <li>Save System</li>
+                                                <li>Scene transition</li>
+                                                <li>Levelling system</li>
+                                                <li>Scriptable objects</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="game-footer">
@@ -99,13 +118,24 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <h4>Zombie Runner</h4>
-                                    <p>
-                                        This is a game in which the player explores a dark landscape infested by zombies. They must use the weapons provided and ammo they find along
-                                        the way to survive. This was my first experience with first person shooters, and allowed me to gain experience using a first person controller.
-                                        Additionally, I gained experience using ProBuilder to create buildings and ammunition assets, and used Unity's animation system to animate
-                                        zombie assets and synchronize their animation with player damage. I gave the zombie enemies a basic AI using a state machine model.
-                                    </p>
+                                    <h4 id="zombie-title">Zombie Runner</h4>
+                                    <div class="summary-container">
+                                        <p>
+                                            In this game the player explores a dark landscape infested by zombies, using the weapons and ammo they find along the way to survive. The 
+                                            zombies will react to nearby players or stop when a player is out of range, and their swipes are synchronized with player damage. The player 
+                                            also needs to keep an eye out for batteries or their flashlight might run out!
+                                        </p>
+                                        <div class="skills-container">
+                                            <h5 class="skill-subtitle">Skills Acquired</h5>
+                                            <ul class="skills-list">
+                                                <li>First-person controller</li>
+                                                <li>Simple state machine for AI</li>
+                                                <li>Probuilder: buildings and ammo assets</li>
+                                                <li>Unity’s animation system</li>
+                                                <li>Lighting effects</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="game-footer">
@@ -128,13 +158,25 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <h4>Argon Assault</h4>
-                                    <p>
-                                        This is an on the rails shooter in which the player flies a ship through dangerous terrain and enemy ships and tries to survive while scoring
-                                        the most points possible. It was one of my earliest projects that contained a full level. I was able to practice using waypoints to move an
-                                        object throughout the scene, Unity's timeline feature to syncronize events, the terrain builder to create my own terrain, particle effects,
-                                        and UI elements. I also gained experience importing and implementing assets from the Unity Asset Store.
-                                    </p>
+                                    <h4 id="argon-title">Argon Assault</h4>
+                                    <div class="summary-container">
+                                        <p>
+                                            This is an on-the-rails shooter in which the player flies a ship through dangerous terrain and enemy ships and tries to survive while 
+                                            scoring the most points possible. This project involved building a terrain from the ground up, complete with a full range of assets and a 
+                                            series of waypoints to move objects throughout the scene. It was one of my earliest projects containing a full level.
+                                        </p>
+                                        <div class="skills-container">
+                                            <h5 class="skill-subtitle">Skills Acquired</h5>
+                                            <ul class="skills-list">
+                                                <li>Waypoints for pathing</li>
+                                                <li>Unity’s timeline system</li>
+                                                <li>Terrain builder</li>
+                                                <li>Particle effects</li>
+                                                <li>Basic UI</li>
+                                                <li>Importing assets from Unity Store</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="game-footer">
