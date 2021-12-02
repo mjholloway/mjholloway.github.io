@@ -125,6 +125,10 @@ header h2 {
     font-weight: bold;
 }
 
+section {
+    margin-bottom: 2%;
+}
+
 /* Main */
 
 main {
@@ -136,7 +140,7 @@ main {
 
 #about p {
     width: 85%;
-    margin: 2% auto;
+    margin: 2% auto 0;
 }
 
 /* Skills */
